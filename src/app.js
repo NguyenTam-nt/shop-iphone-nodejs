@@ -13,10 +13,16 @@ const app = express()
 
 // morgan("combined")
 
-// app.use(morgan("dev"))
+app.use(morgan("dev"))
+app.use(express.json())
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+)
 // app.use(morgan("combined"))
 // app.use(morgan("common"))
-app.use(morgan("tiny"))
+// app.use(morgan("tiny"))
 app.use(helmet())
 app.use(compression())
 // checkOverload()
@@ -25,14 +31,7 @@ app.use(compression())
 require("./dbs/init.mongodb")
 
 // init router
-
-app.get("/", (req, res) => {
-  const stringCompression = "Xin chao nhe"
-  return res.status(200).json({
-    message: "Hello",
-    metadata: stringCompression.repeat(100000),
-  })
-})
+app.use("/", require("./routers"))
 
 // handling error
 
