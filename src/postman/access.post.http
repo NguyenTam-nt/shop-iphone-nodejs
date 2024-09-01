@@ -2,11 +2,131 @@
 
 @url_dev=http://localhost:3055/v1/api/
 
-POST {{url_dev}}shop/sign-up
+# POST {{url_dev}}shop/sign-up
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+
+# {
+#     "name": "Shop1",
+#     "email": "abc11234123@gmail.com",
+#     "password": "abc123"
+# }
+
+#Login request
+
+# POST {{url_dev}}/shop/login
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+
+# {
+#     "email": "abc11234123@gmail.com",
+#     "password": "abc123"
+# }
+
+# POST {{url_dev}}/shop/logout
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyMzg2MzE0NywiZXhwIjoxNzI0MDM1OTQ3fQ.Zl2bdm0lVc6d9hVYJ4xH7HQ264WFd0h_ufO2kiUFuME
+
+
+# POST {{url_dev}}/shop/refresh-token
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# x-rf-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyMzk2NTYyOSwiZXhwIjoxNzI0NTcwNDI5fQ.XR-SKBC4yimoXujzjXdSybkKThS9nPsFNzmpAjrO6t8
+# # authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyMzg4MjQyOSwiZXhwIjoxNzI0MDU1MjI5fQ.B76k-fK2C7aLj-a_6LJeDhCCzMbW7wI7h_d01ygLL7Y
+
+
+POST {{url_dev}}product/create
 Content-Type: application/json
+x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+x-client-id: 66bcbc2977d358f8bb4ddb65
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTA3MzI0MywiZXhwIjoxNzI1MjQ2MDQzfQ.TDYKyGr7IP5S1G80rz-GGrEdB9YzQsEJO0KykqxHoyY
 
 {
-    "name": "Shop 112",
-    "email": "abc1543@gmail.com",
-    "password": "abc123"
+   "product_name": "Ghế Sofa cao cấp",
+    "product_thumb": "product thumnail",
+    "product_description": "áo bền nhất của shop ạ 🥰🥰🥰",
+    "product_price": 5000,
+    "product_quantity": 120,
+    "product_type": "Furniture",
+    "product_shop": "66bcbc2977d358f8bb4ddb65",
+    "product_attributes": {
+        "brand": "My Shape",
+        "size": "M",
+        "material": "cotton"
+    }
 }
+
+
+# GET {{url_dev}}/product/draft-all
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU1MDA4MiwiZXhwIjoxNzI0NzIyODgyfQ.Vq-1yUlAMfrgYxcQNiRZYIGFy9tfHckH2SonTM2b0Fs
+
+# {
+#   "limit": 50,
+#   "skip": 0
+# }
+
+# GET {{url_dev}}/product/publish-all
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU1MDA4MiwiZXhwIjoxNzI0NzIyODgyfQ.Vq-1yUlAMfrgYxcQNiRZYIGFy9tfHckH2SonTM2b0Fs
+
+# {
+#   "limit": 50,
+#   "skip": 0
+# }
+
+# POST {{url_dev}}/product/publish/66ca8df0ba7c9de156ff84ed
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU1MDA4MiwiZXhwIjoxNzI0NzIyODgyfQ.Vq-1yUlAMfrgYxcQNiRZYIGFy9tfHckH2SonTM2b0Fs
+
+# GET {{url_dev}}/product/search?keySearch=ao
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU1MDA4MiwiZXhwIjoxNzI0NzIyODgyfQ.Vq-1yUlAMfrgYxcQNiRZYIGFy9tfHckH2SonTM2b0Fs
+
+
+# GET {{url_dev}}/product
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU1MDA4MiwiZXhwIjoxNzI0NzIyODgyfQ.Vq-1yUlAMfrgYxcQNiRZYIGFy9tfHckH2SonTM2b0Fs
+
+
+# GET {{url_dev}}/product/66ca8df0ba7c9de156ff84ed
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU1MDA4MiwiZXhwIjoxNzI0NzIyODgyfQ.Vq-1yUlAMfrgYxcQNiRZYIGFy9tfHckH2SonTM2b0Fs
+
+
+# PATCH  {{url_dev}}/product/66ca8df0ba7c9de156ff84ed
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTA3MzI0MywiZXhwIjoxNzI1MjQ2MDQzfQ.TDYKyGr7IP5S1G80rz-GGrEdB9YzQsEJO0KykqxHoyY
+
+# {
+#     "product_description": "áo bền nhất của shop ạ 🥰🥰",
+#     "product_price": null,
+#     "product_attributes": {
+#       "brand": "My Shape",
+#       "size": "L",
+#       "material": null
+#     },
+#     "product_ratingsAverage": 4.5,
+#     "product_variations": [],
+#     "createdAt": "2024-08-25T01:50:40.244Z",
+#     "updatedAt": "2024-08-25T03:27:11.142Z",
+#     "product_slug": "ghe-sofa-cao-cap",
+#     "product_type": "Clothing"
+# }
