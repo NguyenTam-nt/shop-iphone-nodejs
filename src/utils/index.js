@@ -50,7 +50,7 @@ const updateNestedObjectParser = (obj) => {
   return final
 }
 
-const convertToObjectId = (id) => Types.ObjectId(id)
+const convertToObjectId = (id) => new Types.ObjectId(id)
 
 module.exports = {
   getInToData,

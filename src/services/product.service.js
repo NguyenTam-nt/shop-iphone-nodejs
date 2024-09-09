@@ -19,6 +19,7 @@ const {
   updateProductById,
 } = require("../models/repositories/product.repo")
 const { removeUndefineObject, updateNestedObjectParser } = require("../utils")
+const NotificationService = require("./notification.service")
 
 class ProductFactory {
   static productRegistry = {}
@@ -127,6 +128,16 @@ class Product {
     const newProduct = await product.create({
       ...this,
       _id: product_id,
+    })
+
+    NotificationService.pushNotification({
+      type: "SHOP-001",
+      senderId: this.product_shop,
+      receiverId: 1,
+      options: {
+        product_name: this.product_name,
+        product_price: this.product_price,
+      },
     })
 
     if (newProduct) {

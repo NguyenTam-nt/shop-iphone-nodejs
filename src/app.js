@@ -6,12 +6,16 @@ const morgan = require("morgan")
 const { default: helmet } = require("helmet")
 const compression = require("compression")
 const { checkOverload } = require("./helpers/check.connect")
+// const productTest = require("./tests/product.test")
+// const redisPubSubService = require("./services/redisPubSub.service")
 
 const app = express()
 
 // init middleware
 
 // morgan("combined")
+// require("./tests/inventory.test")
+// productTest.purchaseProduct("#100102092024", 80)
 
 app.use(morgan("dev"))
 app.use(express.json())

@@ -38,26 +38,26 @@
 # # authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyMzg4MjQyOSwiZXhwIjoxNzI0MDU1MjI5fQ.B76k-fK2C7aLj-a_6LJeDhCCzMbW7wI7h_d01ygLL7Y
 
 
-POST {{url_dev}}product/create
-Content-Type: application/json
-x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
-x-client-id: 66bcbc2977d358f8bb4ddb65
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTA3MzI0MywiZXhwIjoxNzI1MjQ2MDQzfQ.TDYKyGr7IP5S1G80rz-GGrEdB9YzQsEJO0KykqxHoyY
+# POST {{url_dev}}product/create
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTA3MzI0MywiZXhwIjoxNzI1MjQ2MDQzfQ.TDYKyGr7IP5S1G80rz-GGrEdB9YzQsEJO0KykqxHoyY
 
-{
-   "product_name": "Ghế Sofa cao cấp",
-    "product_thumb": "product thumnail",
-    "product_description": "áo bền nhất của shop ạ 🥰🥰🥰",
-    "product_price": 5000,
-    "product_quantity": 120,
-    "product_type": "Furniture",
-    "product_shop": "66bcbc2977d358f8bb4ddb65",
-    "product_attributes": {
-        "brand": "My Shape",
-        "size": "M",
-        "material": "cotton"
-    }
-}
+# {
+#    "product_name": "Ghế Sofa cao cấp",
+#     "product_thumb": "product thumnail",
+#     "product_description": "áo bền nhất của shop ạ 🥰🥰🥰",
+#     "product_price": 5000,
+#     "product_quantity": 120,
+#     "product_type": "Furniture",
+#     "product_shop": "66bcbc2977d358f8bb4ddb65",
+#     "product_attributes": {
+#         "brand": "My Shape",
+#         "size": "M",
+#         "material": "cotton"
+#     }
+# }
 
 
 # GET {{url_dev}}/product/draft-all
@@ -130,3 +130,34 @@ authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3
 #     "product_slug": "ghe-sofa-cao-cap",
 #     "product_type": "Clothing"
 # }
+
+
+# POST  {{url_dev}}/comment
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTI3MDQzMCwiZXhwIjoxNzI1NDQzMjMwfQ.Bdd2Q4SEn8VMNi9h7NFIopbuHycmFGJ9rC0MdlSS4qg
+
+# {
+#    "productId": "66ca8df0ba7c9de156ff84ed",
+#    "content": "comment 1.2.2.1",
+#    "parentId": "66d58a7dc55ac75fb79d80f6"
+# }
+
+
+# GET  {{url_dev}}/comment/?productId=66ca8df0ba7c9de156ff84ed&parentId=66d58a39c55ac75fb79d80e8
+# Content-Type: application/json
+# x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+# x-client-id: 66bcbc2977d358f8bb4ddb65
+# authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTI3MDQzMCwiZXhwIjoxNzI1NDQzMjMwfQ.Bdd2Q4SEn8VMNi9h7NFIopbuHycmFGJ9rC0MdlSS4qg
+
+DELETE   {{url_dev}}/comment
+Content-Type: application/json
+x-api-key: 0fcf314f927121e9637a3d61fb195f287f9a79f12b3738b01044c52012f0c20d2fe2c49b87edd5d8
+x-client-id: 66bcbc2977d358f8bb4ddb65
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJjYmMyOTc3ZDM1OGY4YmI0ZGRiNjUiLCJlbWFpbCI6ImFiYzExMjM0MTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyNTI3MDQzMCwiZXhwIjoxNzI1NDQzMjMwfQ.Bdd2Q4SEn8VMNi9h7NFIopbuHycmFGJ9rC0MdlSS4qg
+
+{
+   "productId": "66ca8df0ba7c9de156ff84ed",
+   "commentId": "66d58a39c55ac75fb79d80e8"
+}
