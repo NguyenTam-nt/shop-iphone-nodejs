@@ -56,6 +56,26 @@ app.get("/check-status", (req, res, next) => {
   })
 })
 
+app.get("/api/user", (req, res, next) => {
+  res.status(200).send({
+    status: "ok",
+    metaDta: [
+      {
+        name: "Nguyễn Thanh Tâm",
+        age: 25,
+      },
+      {
+        name: "Nguyễn Thanh Hà",
+        age: 25,
+      },
+      {
+        name: "Nguyễn Thanh Hà",
+        age: 25,
+      },
+    ],
+  })
+})
+
 app.use("/v1/api", require("./routers"))
 
 // handling error
