@@ -39,10 +39,20 @@ require("./dbs/init.mongodb")
 app.get("/check-status", (req, res, next) => {
   res.status(200).send({
     status: "ok",
-    metaDta: {
-      name: "Nguyễn Thanh Tâm",
-      age: 25,
-    },
+    metaDta: [
+      {
+        name: "Nguyễn Thanh Tâm",
+        age: 25,
+      },
+      {
+        name: "Nguyễn Thanh Hà",
+        age: 25,
+      },
+      {
+        name: "Nguyễn Thanh Hà",
+        age: 25,
+      },
+    ],
   })
 })
 
